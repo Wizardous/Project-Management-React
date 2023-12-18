@@ -4,6 +4,7 @@ import { NewProject } from "./Components/NewProject";
 import { NoProjectSelected } from "./Components/NoProjectSelected";
 import { ProjectsSidebar } from "./Components/ProjectsSidebar";
 import { SelectedProject } from "./Components/SelectedProject";
+import ProjectManagementContextProvider from "./store/project-management-context";
 
 function App() {
 	const [projectsState, setProjectsState] = useState({
@@ -113,15 +114,17 @@ function App() {
 	}
 
 	return (
-		<main className="h-screen my-8 flex gap-8">
-			<ProjectsSidebar
-				onStartAddProject={handleStartAddProject}
-				projects={projectsState.projects}
-				onSelectProject={handleSelectProject}
-				selectedProjectId={projectsState.selectedProjectId}
-			/>
-			{content}
-		</main>
+		<ProjectManagementContextProvider>
+			<main className="h-screen my-8 flex gap-8">
+				<ProjectsSidebar
+					onStartAddProject={handleStartAddProject}
+					projects={projectsState.projects}
+					onSelectProject={handleSelectProject}
+					selectedProjectId={projectsState.selectedProjectId}
+				/>
+				{content}
+			</main>
+		</ProjectManagementContextProvider>
 	);
 }
 
