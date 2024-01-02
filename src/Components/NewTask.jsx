@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { ProjectsContext } from "../store/project-management-context";
 
-export function NewTask({ onAdd }) {
+export function NewTask() {
+    const {addTask} = useContext(ProjectsContext);
+
     const [enteredTask, setEnteredTask] = useState("");
 
     function handleChange(event) {
@@ -11,7 +14,7 @@ export function NewTask({ onAdd }) {
         if (enteredTask.trim() === ""){
             return;
         }
-        onAdd(enteredTask);
+        addTask(enteredTask);
         setEnteredTask("");
     }
 
