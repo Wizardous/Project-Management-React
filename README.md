@@ -9,11 +9,7 @@ This is a practice React project, which I built while I was learning React on on
 
 The primary goal of this practice project was to help understand the fundamental concepts of React like functional components, use of props, refs, concepts like forward ref, prop drilling, and some important React hooks like `useState`, `useRef` etc. This project helps a lot in understanding how data can be passed around between components using props, as well as using refs and callback functions between components to control different parts of the application.
 
-## Context API Branch
+## This is Prop-Drill Branch
+If you are reading this, then that means you are currently checking out the prop-drill branch of this repository. This is the archive of the original code, when developed without the use of any context API methods. All the data passed between components is using Props and use of callback function props to update application state. 
 
-Although during the time of this project walkthrough in the course, the context API in react (or any sort of centralized state management tool) was not covered yet. Hence you will see a lot of prop drilling between components to pass around the app's state data. However, after I completed learning the context API, I restructured the project code to use the context API and make it easy to manage the state without the issue of prop drilling covering all of the JSX code. To check the second version of the project which I have created using the context API on the other branch named **context-api**.
-
-## Future Objective
-My next objectives will be to rewrite the project using some other cool features in React to learn more about them such as,
-- [ ] Using Redux.
-- [ ] Adding data persistence using IndexedDB and Local Storage.
+The main branch will have whichever latest updates were added to the project like using Context-API, Redux, etc. The main branch will be archived to a different branch before upgrading the project with new features, to preserve the old states of the projects with old set of features or functionalities.
